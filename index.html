@@ -2158,8 +2158,7 @@ const allPanelsFull = ['compose','assistant','layout','writing','video','profile
 // DISABLED: document.querySelectorAll('.nav-tab').forEach((tab, i) => {
   if (allPanelsFull[i]) tab.onclick = () => showPanel(allPanelsFull[i]);
 });
-</script>
-<script>
+
 // Finance panel init
 const _origShowPanelFin = window.showPanel;
 window.showPanel = function(id) {
