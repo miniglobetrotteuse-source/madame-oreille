@@ -2376,8 +2376,7 @@ function goTo(panel) {
   document.getElementById('welcomeScreen').style.display = 'none';
   showPanel(panel);
 }
-</script>
-<script>
+
 const _origShowV3 = window.showPanel;
 window.showPanel = function(id) {
   _origShowV3(id);
@@ -2388,8 +2387,7 @@ window.showPanel = function(id) {
   if (id === 'jingles') document.getElementById('jinglesContent').innerHTML = JINGLES.renderPanel();
   if (id === 'publish') document.getElementById('publishContent').innerHTML = PUBLISH.renderPanel();
 };
-</script>
-<script>
+
 const _origShowV4 = window.showPanel;
 window.showPanel = function(id) {
   _origShowV4(id);
