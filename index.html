@@ -2369,39 +2369,7 @@ function goTo(panel) {
 const _origShowFinalV2 = window.showPanel;
 window.showPanel = function(id) {
   _origShowFinalV2(id);
-  if (id === 'analytics') document.getElementById('analyticsContent').innerHTML = ANALYTICS.renderPanel();
-  if (id === 'recipes') document.getElementById('recipesContent').innerHTML = RECIPES.renderPanel();
-  if (id === 'method') document.getElementById('methodContent').innerHTML = METHOD.renderPanel();
-  if (id === 'sport') document.getElementById('sportContent').innerHTML = SPORT.renderPanel();
-  if (id === 'etiquette') document.getElementById('etiquetteContent').innerHTML = ETIQUETTE.renderPanel();
-  if (id === 'literacy') document.getElementById('literacyContent').innerHTML = LITERACY.renderPanel();
-  if (id === 'culture') document.getElementById('cultureGenContent').innerHTML = CULTURE_GEN.renderPanel();
-  if (id === 'events') document.getElementById('eventsDecoContent').innerHTML = EVENTS_DECO.renderPanel();
-  if (id === 'sos') document.getElementById('sosContent').innerHTML = SOS_HEALTH.renderPanel();
-  if (id === 'driving') document.getElementById("drivingContent").innerHTML = DRIVING_EXAM.renderPanel();
-  if (id === 'fiscal') document.getElementById('fiscalContent').innerHTML = FISCAL.renderPanel();
-  if (id === 'numeracy') document.getElementById('numeracyContent').innerHTML = NUMERACY.renderPanel();
-  if (id === 'parents') document.getElementById('parentGuidesContent').innerHTML = PARENT_GUIDES.renderPanel();
-  if (id === 'analytics') document.getElementById('analyticsContent').innerHTML = ANALYTICS.renderPanel();
-  if (id === 'recipes') document.getElementById('recipesContent').innerHTML = RECIPES.renderPanel();
-  if (id === 'method') document.getElementById('methodContent').innerHTML = METHOD.renderPanel();
-  if (id === 'sport') document.getElementById('sportContent').innerHTML = SPORT.renderPanel();
-  if (id === 'etiquette') document.getElementById('etiquetteContent').innerHTML = ETIQUETTE.renderPanel();
-  if (id === 'literacy') document.getElementById('literacyContent').innerHTML = LITERACY.renderPanel();
-  if (id === 'culture') document.getElementById('cultureGenContent').innerHTML = CULTURE_GEN.renderPanel();
-  if (id === 'events') document.getElementById('eventsDecoContent').innerHTML = EVENTS_DECO.renderPanel();
-  if (id === 'sos') document.getElementById('sosContent').innerHTML = SOS_HEALTH.renderPanel();
-  if (id === 'driving') document.getElementById("drivingContent").innerHTML = DRIVING_EXAM.renderPanel();
-  if (id === 'fiscal') document.getElementById('fiscalContent').innerHTML = FISCAL.renderPanel();
-  if (id === 'numeracy') document.getElementById('numeracyContent').innerHTML = NUMERACY.renderPanel();
-  if (id === 'parents') document.getElementById('parentGuidesContent').innerHTML = PARENT_GUIDES.renderPanel();
-  if (id === 'newsletter') document.getElementById('newsletterContent').innerHTML = NEWSLETTER.renderPanel();
-  if (id === 'mboka') document.getElementById('mbokaContent').innerHTML = WELCOME.show('mboka') + MBOKA.renderPanel();
-  if (id === 'podcast') document.getElementById('podcastContent').innerHTML = PODCAST.renderPanel();
-  if (id === 'content') document.getElementById('contentContent').innerHTML = CONTENT.renderPanel();
-  if (id === 'subtitles') document.getElementById('subtitlesContent').innerHTML = SUBTITLES.renderPanel();
-  if (id === 'fonts') document.getElementById('fontsContent').innerHTML = FONTS.renderPanel();
-};
+  
 
 // Mise à jour accueil avec nouveaux boutons
 function goTo(panel) {
