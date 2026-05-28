@@ -2369,13 +2369,13 @@ function goTo(panel) {
 const _origShowFinalV2 = window.showPanel;
 window.showPanel = function(id) {
   _origShowFinalV2(id);
-  
+  };
 
 // Mise à jour accueil avec nouveaux boutons
 function goTo(panel) {
   document.getElementById('welcomeScreen').style.display = 'none';
   showPanel(panel);
-}
+};
 </script>
 <script>
 const _origShowV3 = window.showPanel;
