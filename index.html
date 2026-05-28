@@ -2102,8 +2102,8 @@ const allPanels = ['compose','assistant','layout','writing','video','profile','t
 // DISABLED: document.querySelectorAll('.nav-tab').forEach((tab, i) => {
   if (allPanels[i]) tab.onclick = () => showPanel(allPanels[i]);
 });
-</script>
-<script>
+
+
 // ─── Collab panel init ────────────────────────────
 const _origShowPanelCollab = window.showPanel;
 window.showPanel = function(id) {
