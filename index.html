@@ -2421,9 +2421,8 @@ window.showPanel = function(id) {
   if (id === 'learn') { if(window.ADMIN) ADMIN.logStat('learn_session', {}); document.getElementById('learnContent').innerHTML = LEARN.renderPanel(); }
   if (id === 'first-aid') { if(window.ADMIN) ADMIN.logStat('first_aid_open', {}); document.getElementById('firstAidContent').innerHTML = FIRST_AID.renderPanel(); }
   if (id === 'memory-system') document.getElementById('memorySystemContent').innerHTML = MEMORY_SYSTEM.renderPanel();
-};
-</script>
-<script>
+}
+
 // ─── Amélioration changeLang avec Masakhane ────
 const _origChangeLang = window.changeLang;
 window.changeLang = async function(lang) {
@@ -2440,9 +2439,8 @@ window.changeLang = async function(lang) {
       });
     }
   }
-};
-</script>
-<script>
+}
+
 // ─── Mode veille IA ───────────────────────────
 window.SLEEP_KEY = 'moe_ia_sleep';
 
