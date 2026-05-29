@@ -1374,7 +1374,7 @@ async function tryUnlock() {
   const claudeKey=getKey('claudeKey');
   if(!claudeKey) { alert('Clé Claude manquante.'); return; }
 
-  const r=await fetch('https://api.anthropic.com/v1/messages',{
+  const r=await fetch('/api/claude',{
     method:'POST',
     headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
     body:JSON.stringify({
@@ -1622,7 +1622,7 @@ async function sendChat() {
   input.value='';
   const thinking=addChatMsg('assistant','…','thinking');
   try {
-    const r=await fetch('https://api.anthropic.com/v1/messages',{
+    const r=await fetch('/api/claude',{
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
       body:JSON.stringify({
@@ -1662,7 +1662,7 @@ async function handleChatFile(input) {
       const claudeKey=getKey('claudeKey'); if(!claudeKey) return;
       const thinking=addChatMsg('assistant','…','thinking');
       try {
-        const r=await fetch('https://api.anthropic.com/v1/messages',{
+        const r=await fetch('/api/claude',{
           method:'POST',
           headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
           body:JSON.stringify({
@@ -1703,7 +1703,7 @@ async function analyzeVideoFrames(file) {
     ...frames.map(f=>({type:'image',source:{type:'base64',media_type:'image/jpeg',data:f.split(',')[1]}})),
     {type:'text',text:`Analyse ces ${frames.length} frames extraites d'une vidéo de référence. Décris avec précision : palette de couleurs, ambiance lumineuse, type de mouvement de caméra, effets visuels, rythme, composition générale. Puis propose comment reproduire cette esthétique dans l'univers Madame Or Eille (fauteuils sculptés, tapis arc-en-ciel, téléphone vintage). Sois précis et créatif.`}
   ];
-  const r=await fetch('https://api.anthropic.com/v1/messages',{
+  const r=await fetch('/api/claude',{
     method:'POST',
     headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
     body:JSON.stringify({model:CFG.CLAUDE_MODEL,max_tokens:1000,messages:[{role:'user',content}]})
@@ -1778,7 +1778,7 @@ async function generateWriting(){
   showSt2(st,'loading','Rédaction en cours…'); speak('Rédaction en cours.');
   const typeLabels={cv:'un CV',motivation:'une lettre de motivation',officielle:'une lettre officielle',miseendemeure:'une mise en demeure',email:'un email professionnel',autre:'un document'};
   try {
-    const r=await fetch('https://api.anthropic.com/v1/messages',{
+    const r=await fetch('/api/claude',{
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
       body:JSON.stringify({
