@@ -2321,7 +2321,7 @@ const allPanelsMasterFinal = ['compose','assistant','layout','writing','video','
 // DISABLED: document.querySelectorAll('.nav-tab').forEach((tab, i) => {
   if (allPanelsMasterFinal[i]) tab.onclick = () => showPanel(allPanelsMasterFinal[i]);
 });
-</script>
+
 <script>
 const _origShowPanelCash = window.showPanel;
 window.showPanel = function(id) {
@@ -2332,8 +2332,6 @@ const allPanelsV10 = ['compose','assistant','layout','writing','video','profile'
 // DISABLED: document.querySelectorAll('.nav-tab').forEach((tab, i) => {
   if (allPanelsV10[i]) tab.onclick = () => showPanel(allPanelsV10[i]);
 });
-</script>
-<script>
 // Init nouveaux panneaux
 const _origShowFinal = window.showPanel;
 window.showPanel = function(id) {
