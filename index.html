@@ -2256,8 +2256,8 @@ function addHealthReminder() {
   SAFETY.addHealthReminder(med, times, '');
   if (window.addChatMsg) addChatMsg('assistant', `✓ Rappel configuré — ${med} à ${times.join(' et ')}.`);
 }
-</script>
-<script>
+
+
 // A11Y panel init
 const _origShowPanelA11y = window.showPanel;
 window.showPanel = function(id) {
@@ -2272,8 +2272,8 @@ const allPanelsFinalV2 = ['compose','assistant','layout','writing','video','prof
 // DISABLED: document.querySelectorAll('.nav-tab').forEach((tab, i) => {
   if (allPanelsFinalV2[i]) tab.onclick = () => showPanel(allPanelsFinalV2[i]);
 });
-</script>
-<script>
+
+
 // Security panel init
 const _origShowPanelSec = window.showPanel;
 window.showPanel = function(id) {
@@ -2288,8 +2288,7 @@ const allPanelsFinalV3 = ['compose','assistant','layout','writing','video','prof
 // DISABLED: document.querySelectorAll('.nav-tab').forEach((tab, i) => {
   if (allPanelsFinalV3[i]) tab.onclick = () => showPanel(allPanelsFinalV3[i]);
 });
-</script>
-<script>
+
 // Music & Neuro panel init
 const _origShowPanelFinal = window.showPanel;
 window.showPanel = function(id) {
@@ -2312,7 +2311,6 @@ window.addEventListener('load', () => {
     if (!window.CFG?.CLAUDE_KEY) console.warn('Jeff: CFG.CLAUDE_KEY manquant — assistant désactivé');
   }, 500);
 });
-</script>
 <script>
 const _origShowPanelRev = window.showPanel;
 window.showPanel = function(id) {
