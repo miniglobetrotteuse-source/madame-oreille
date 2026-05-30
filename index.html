@@ -1673,9 +1673,8 @@ async function handleChatFile(input) {
         });
         const d=await r.json();
         const reply=d.content[0].text;
-        thinking.classList.remove('thinking'); thinking.textContent=reply;
+       
         speak(reply);
-      } catch(e){thinking.classList.remove('thinking');thinking.textContent='Erreur : '+e.message}
     });
   }
 }
