@@ -1615,16 +1615,15 @@ async function sendChat() {
   const intent=checkIntent(text);
   if(intent==='permanent'){triggerPermanentBlock(text);return}
   if(intent==='temp'){triggerTempBlock(text);return}
-  const claudeKey=getKey('claudeKey');
-  if(!claudeKey){addChatMsg('assistant','Clé Claude manquante dans la section 03 — Clés API.');return}
-  addChatMsg('user',text);
+  
+ 
   chatHistory.push({role:'user',content:text});
   input.value='';
   const thinking=addChatMsg('assistant','…','thinking');
   try {
     const r=await fetch('/api/claude',{
       method:'POST',
-      headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         model:CFG.CLAUDE_MODEL,max_tokens:1000,
         system:MEM.buildSystemPrompt()+MEM.QUALITY_PROMPT+(window.MEMORY_SYSTEM ? '\n\n'+MEMORY_SYSTEM.buildAssistantContext() : ''),
