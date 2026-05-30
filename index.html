@@ -1619,7 +1619,7 @@ async function sendChat() {
  
   chatHistory.push({role:'user',content:text});
   input.value='';
-  const thinking=addChatMsg('assistant','…','thinking');
+
   try {
     const r=await fetch('/api/claude',{
       method:'POST',
