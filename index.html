@@ -1657,8 +1657,8 @@ async function handleChatFile(input) {
     readFile(file,async url=>{
       addChatMsg('user','[Image jointe pour analyse]');
       const claudeKey=getKey('claudeKey'); if(!claudeKey) return;
-      const thinking=addChatMsg('assistant','…','thinking');
-      try {
+     
+     
         const r=await fetch('/api/claude',{
           method:'POST',
           headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
