@@ -1671,7 +1671,7 @@ async function handleChatFile(input) {
           })
         });
         const d=await r.json();
-        const reply=d.content[0].text;
+       const reply=d.content.filter(b=>b.type==='text').map(b=>b.text).join('\n');
        
         speak(reply);
     });
