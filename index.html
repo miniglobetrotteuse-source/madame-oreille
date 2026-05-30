@@ -1656,12 +1656,11 @@ async function handleChatFile(input) {
   } else {
     readFile(file,async url=>{
       addChatMsg('user','[Image jointe pour analyse]');
-      const claudeKey=getKey('claudeKey'); if(!claudeKey) return;
+      
      
      
         const r=await fetch('/api/claude',{
           method:'POST',
-          headers:{'Content-Type':'application/json','x-api-key':claudeKey,'anthropic-version':'2023-06-01'},
           body:JSON.stringify({
             model:CFG.CLAUDE_MODEL,max_tokens:800,
             system:MEM.buildSystemPrompt()+MEM.QUALITY_PROMPT+(window.MEMORY_SYSTEM ? '\n\n'+MEMORY_SYSTEM.buildAssistantContext() : ''),
