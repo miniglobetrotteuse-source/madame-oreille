@@ -1635,10 +1635,8 @@ async function sendChat() {
     const data=await r.json();
     const reply=data.content.filter(b=>b.type==='text').map(b=>b.text).join('\n');
     chatHistory.push({role:'assistant',content:reply});
-    thinking.classList.remove('thinking'); thinking.textContent=reply;
-    document.getElementById('chatMessages').scrollTop=document.getElementById('chatMessages').scrollHeight;
-    speak(reply);
-  } catch(e){thinking.classList.remove('thinking');thinking.textContent='Erreur : '+e.message;thinking.classList.add('blocked')}
+    addChatMsg('assistant',reply);
+ 
 }
 
 async function searchWeb() {
